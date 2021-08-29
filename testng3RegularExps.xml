@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BankLoans">
+  <test name="HDFC Bank Details">
+    <classes>
+      <class name="learning.framework.HDFCBank"/>
+      <class name="learning.framework.HDFCBankCreditCard">
+      	<methods>
+      		<exclude name="card.*"/>
+      	</methods>
+      </class>
+    </classes>
+  </test> 
+  <test name="SBI Bank Details">
+    <classes>
+      <class name="learning.framework.SBIBank"/>
+      <class name="learning.framework.SBIBankCreditCard">
+      <methods>
+      		<exclude name="card.*"/>
+      	</methods>
+      </class>
+    </classes>
+  </test> 
+  <test name="ICICI Bank Details">
+    <classes>
+      <class name="learning.framework.ICICIBank"/>
+      <class name="learning.framework.ICICIBankCreditCard">
+      <methods>
+      		<include name="card.*"/>
+      	</methods>
+      </class>
+    </classes>
+  </test> 
+</suite> 

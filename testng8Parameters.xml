@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BankLoans">
+	<listeners>
+		<listener class-name="learning.framework.Listeners" />
+	</listeners>
+	<parameter name="MasterUserEmail"
+		value="BankMasterUser@gmail.com" />
+	<parameter name="MasterUserID" value="BankMasterID101" />
+	<test name="HDFC Bank Details">
+		<parameter name="HDFCUserEmail"
+			value="HDFCBankUser@gmail.com" />
+		<parameter name="HDFCUserID" value="HDFCID102" />
+		<classes>
+			<class name="learning.framework.HDFCBank" />
+			<class name="learning.framework.HDFCBankCreditCard" />
+		</classes>
+	</test>
+	<test name="SBI Bank Details">
+		<parameter name="SBIUserEmail" value="SBIBankUser@gmail.com" />
+		<parameter name="SBIUserID" value="SBIID103" />
+		<classes>
+			<class name="learning.framework.SBIBank" />
+			<class name="learning.framework.SBIBankCreditCard" />
+		</classes>
+	</test>
+	<test name="ICICI Bank Details">
+		<parameter name="ICICIUserEmail"
+			value="ICICIBankUser@gmail.com" />
+		<parameter name="ICICIUserID" value="ICICIID104" />
+		<classes>
+			<class name="learning.framework.ICICIBank" />
+			<class name="learning.framework.ICICIBankCreditCard" />
+		</classes>
+	</test>
+</suite> 

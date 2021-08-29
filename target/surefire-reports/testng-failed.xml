@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [BankLoans]">
+  <parameter name="MasterUserEmail" value="BankMasterUser@gmail.com"/>
+  <parameter name="MasterUserID" value="BankMasterID101"/>
+  <listeners>
+    <listener class-name="learning.framework.Listeners"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="SBI Bank Details(failed)">
+    <parameter name="SBIUserID" value="SBIID103"/>
+    <parameter name="SBIUserEmail" value="SBIBankUser@gmail.com"/>
+    <classes>
+      <class name="learning.framework.SBIBankCreditCard">
+        <methods>
+          <include name="creditCardCharges"/>
+          <include name="aftLoan"/>
+          <include name="bftLoan"/>
+        </methods>
+      </class> <!-- learning.framework.SBIBankCreditCard -->
+    </classes>
+  </test> <!-- SBI Bank Details(failed) -->
+</suite> <!-- Failed suite [BankLoans] -->
